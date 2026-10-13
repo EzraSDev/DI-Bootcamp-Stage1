@@ -56,6 +56,8 @@ names = [ "Elie", "Tim", "Matt"]
 #     if letter not in vowels:
 #         consonants.append(letter)
 # print(consonants)
+
+
 # full_list = []
 # for i in range(3):
 #     list1 = []
@@ -64,6 +66,8 @@ names = [ "Elie", "Tim", "Matt"]
 #     full_list.append(list1)
 
 # print(full_list)
+
+
 full_list = []
 for i in range(10):
     list1 = []

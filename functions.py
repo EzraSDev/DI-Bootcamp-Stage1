@@ -142,7 +142,7 @@ def compact(phrase):
     return new_phrase
 
 
-def partition(something, fun())
+def partition(something, fun):
     return False
    #This function accepts a list and a callback function (which you can assume returns True or False). The function should iterate over each element in the list and invoke the callback function at each iteration. If the result of the callback function is True, the element should go into one list if it’s False, the element should go into another list. When it’s finished, partition should return both lists inside of one larger list.
 
