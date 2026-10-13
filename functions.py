@@ -142,15 +142,49 @@ def compact(phrase):
     return new_phrase
 
 
-def partition(something, fun):
-    
-   #This function accepts a list and a callback function (which you can assume returns True or False). The function should iterate over each element in the list and invoke the callback function at each iteration. If the result of the callback function is True, the element should go into one list if it’s False, the element should go into another list. When it’s finished, partition should return both lists inside of one larger list.
+def partition(items, callback):
+    true_list = []
+    false_list= []
+    final_list= []
+    for val in items:
+        if callback(val):
+            true_list.append(val)
+        else:
+            false_list.append(val)
+
+    final_list.append(true_list)
+    final_list.append(false_list)
+    return final_list
+
+def intersection(list1, list2):
+    new_list=[]
+    for val in list1:
+        for val2 in list2:
+            if val ==val2 and val not in new_list:
+                new_list.append(val)
+    return new_list
 
 
+def intersection_two_dimensional(list1):
+    new_list = []
+    for val in list1[0]:
+        for val2 in list1[1]:
+            if val == val2 and val not in new_list:
+                new_list.append(val)
+    return new_list
 
-# def intersection():
 
-# def once():
+def once(fun):
+    did_it_run = False
+    def another_fun(num1, num2):
+        nonlocal did_it_run
+        if not did_it_run:
+            did_it_run = True
+            return fun(num1, num2)
+        return None
+    return another_fun
 
-# def once_bonus():
-
+@once
+def a_func(num1, num2):
+    return num1 + num2
+  
