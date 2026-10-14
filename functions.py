@@ -187,4 +187,10 @@ def once(fun):
 @once
 def a_func(num1, num2):
     return num1 + num2
-  
+
+
+###CODEWARS###
+##Reverse a string "jello world" or "ejncoiwen or rnvw ksadm"
+def reverse(st):
+    words = st.split()
+    return " ".join(words[::-1])
